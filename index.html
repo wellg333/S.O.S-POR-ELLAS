@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S.O.S POR ELLAS</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+
+  <header id="header">
+    <h4>Disfarce: clique aqui se estiver insegura</h4>
+  </header>
+
+  <div class="spacer"></div>
+
+
+  <section class="banner-cinza">
+    <h1 class="titulo-banner">S.O.S POR ELLAS</h1>
+    <p class="subtitulo-banner">Tú estás para ellas, nosotros también</p>
+    <button class="btn-denuncie" id="openFormBtn">DENUNCIE</button>
+  </section>
+
+  <section class="banner-preto">
+    <h2>CENTRAL DE INFORMAÇÕES & REDES DE APOIO</h2>
+    <div id="mapa"></div>
+  </section>
+
+  <section class="banner-roxo">
+    <h2>CANAIS DE PRESTAÇÃO</h2>
+    <p>Aqui você encontra os canais oficiais de denúncia e apoio disponíveis em sua região. Entre em contato de forma rápida, segura e sigilosa.</p>
+  </section>
+
+  <div id="denunciaModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Formulário de Denúncia</h2>
+      <form id="denunciaForm">
+        <label><input type="checkbox" name="anonima"> Quero fazer a denúncia de forma anônima</label>
+
+        <label>Tipo de violência
+          <select name="tipo_violencia" required>
+            <option value="">Selecione</option>
+            <option value="fisica">Física</option>
+            <option value="psicologica">Psicológica</option>
+            <option value="sexual">Sexual</option>
+            <option value="patrimonial">Patrimonial</option>
+            <option value="moral">Moral</option>
+            <option value="stalking">Stalking</option>
+          </select>
+        </label>
+
+        <label>Descreva o que aconteceu
+          <textarea name="descricao" rows="5" required></textarea>
+        </label>
+
+        <label>Local do ocorrido
+          <input type="text" name="local" required>
+        </label>
+
+        <label>Quando aconteceu?
+          <input type="date" name="data_ocorrido" required>
+        </label>
+
+        <label>Informações sobre o agressor (opcional)
+          <input type="text" name="agressor">
+        </label>
+
+        <label>Anexar arquivos/provas
+          <input type="file" name="arquivo">
+        </label>
+
+        <label>Deseja acompanhamento?</label>
+        <label><input type="radio" name="acompanhamento" value="sim"> Sim</label>
+        <label><input type="radio" name="acompanhamento" value="nao" checked> Não</label>
+
+        <div id="acompanhamentoInfo" style="display:none;">
+          <label>Nome<input type="text" name="acomp_nome"></label>
+          <label>E-mail<input type="email" name="acomp_email"></label>
+          <label>Telefone<input type="tel" name="acomp_telefone"></label>
+        </div>
+
+        <button type="submit" class="btn-denuncie">Enviar denúncia</button>
+      </form>
+    </div>
+  </div>
+
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="maps.js"></script>
+  <script src="script.js"></script>
+  <script src="form.js"></script>
+
+</body>
+</html>

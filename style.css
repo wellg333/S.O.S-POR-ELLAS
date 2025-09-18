@@ -1,0 +1,60 @@
+body { margin:0; font-family: Arial, sans-serif; }
+header { position: fixed; top:0; left:0; width:100%; background:#6a0dad; color:#fff; padding:15px 20px; text-align:center; z-index:1000; cursor:pointer; }
+.spacer { height:70px; }
+
+
+.banner-cinza {
+  background:#e0e0e0;
+  color:#6a0dad;
+  padding:60px 20px;
+  text-align:center;
+}
+.titulo-banner {
+  font-size:32px;
+  font-weight:bold;
+  color:#6a0dad;
+  margin-bottom:10px;
+}
+.subtitulo-banner {
+  font-size:18px;
+  color:#6a0dad;
+  margin-bottom:30px;
+}
+
+
+.btn-denuncie {
+  display:inline-block;
+  width:120px;
+  height:120px;
+  line-height:120px;
+  background:#6a0dad;
+  color:#fff;
+  border:none;
+  border-radius:50%;
+  font-weight:bold;
+  font-size:18px;
+  cursor:pointer;
+  text-align:center;
+  transition:0.3s;
+}
+.btn-denuncie:hover { background:#500a8c; }
+
+
+.banner-preto { background:#000; color:#fff; padding:60px 20px; text-align:center; }
+.banner-preto h2 { font-size:26px; font-weight:bold; margin-bottom:20px; }
+#mapa { width:100%; height:400px; margin-top:20px; }
+
+
+.banner-roxo { background:#6a0dad; color:#fff; padding:60px 20px; text-align:center; }
+.banner-roxo h2 { font-size:26px; font-weight:bold; margin-bottom:15px; }
+.banner-roxo p { font-size:16px; max-width:600px; margin:0 auto; }
+
+
+.modal { display:none; position:fixed; z-index:2000; left:0; top:0; width:100%; height:100%; overflow:auto; background:rgba(0,0,0,0.7); }
+.modal-content { background:#fff; margin:5% auto; padding:20px; border-radius:10px; max-width:600px; position:relative; }
+.close { position:absolute; right:15px; top:10px; font-size:28px; font-weight:bold; cursor:pointer; }
+.close:hover { color:#6a0dad; }
+
+
+form label { display:block; margin-bottom:12px; }
+form input, form select, form textarea { width:100%; padding:8px; margin-top:5px; border-radius:5px; border:1px solid #ccc; }
